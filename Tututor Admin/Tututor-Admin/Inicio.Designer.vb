@@ -24,13 +24,9 @@ Partial Class Inicio
     Private Sub InitializeComponent()
         Me.MenuStrip1 = New System.Windows.Forms.MenuStrip()
         Me.AltaToolStripMenuItem = New System.Windows.Forms.ToolStripMenuItem()
-        Me.ConsultaToolStripMenuItem = New System.Windows.Forms.ToolStripMenuItem()
-        Me.ModificarToolStripMenuItem = New System.Windows.Forms.ToolStripMenuItem()
-        Me.ListarToolStripMenuItem = New System.Windows.Forms.ToolStripMenuItem()
-        Me.UsuarioToolStripMenuItem = New System.Windows.Forms.ToolStripMenuItem()
-        Me.UsuarioToolStripMenuItem1 = New System.Windows.Forms.ToolStripMenuItem()
-        Me.UsuarioToolStripMenuItem2 = New System.Windows.Forms.ToolStripMenuItem()
         Me.UsuarioToolStripMenuItem3 = New System.Windows.Forms.ToolStripMenuItem()
+        Me.ConsultaToolStripMenuItem = New System.Windows.Forms.ToolStripMenuItem()
+        Me.UsuarioToolStripMenuItem2 = New System.Windows.Forms.ToolStripMenuItem()
         Me.Label1 = New System.Windows.Forms.Label()
         Me.PictureBox1 = New System.Windows.Forms.PictureBox()
         Me.MenuStrip1.SuspendLayout()
@@ -39,7 +35,7 @@ Partial Class Inicio
         '
         'MenuStrip1
         '
-        Me.MenuStrip1.Items.AddRange(New System.Windows.Forms.ToolStripItem() {Me.AltaToolStripMenuItem, Me.ConsultaToolStripMenuItem, Me.ModificarToolStripMenuItem, Me.ListarToolStripMenuItem})
+        Me.MenuStrip1.Items.AddRange(New System.Windows.Forms.ToolStripItem() {Me.AltaToolStripMenuItem, Me.ConsultaToolStripMenuItem})
         Me.MenuStrip1.Location = New System.Drawing.Point(0, 0)
         Me.MenuStrip1.Name = "MenuStrip1"
         Me.MenuStrip1.Size = New System.Drawing.Size(800, 24)
@@ -53,6 +49,12 @@ Partial Class Inicio
         Me.AltaToolStripMenuItem.Size = New System.Drawing.Size(40, 20)
         Me.AltaToolStripMenuItem.Text = "Alta"
         '
+        'UsuarioToolStripMenuItem3
+        '
+        Me.UsuarioToolStripMenuItem3.Name = "UsuarioToolStripMenuItem3"
+        Me.UsuarioToolStripMenuItem3.Size = New System.Drawing.Size(180, 22)
+        Me.UsuarioToolStripMenuItem3.Text = "Usuario"
+        '
         'ConsultaToolStripMenuItem
         '
         Me.ConsultaToolStripMenuItem.DropDownItems.AddRange(New System.Windows.Forms.ToolStripItem() {Me.UsuarioToolStripMenuItem2})
@@ -60,43 +62,11 @@ Partial Class Inicio
         Me.ConsultaToolStripMenuItem.Size = New System.Drawing.Size(66, 20)
         Me.ConsultaToolStripMenuItem.Text = "Consulta"
         '
-        'ModificarToolStripMenuItem
-        '
-        Me.ModificarToolStripMenuItem.DropDownItems.AddRange(New System.Windows.Forms.ToolStripItem() {Me.UsuarioToolStripMenuItem1})
-        Me.ModificarToolStripMenuItem.Name = "ModificarToolStripMenuItem"
-        Me.ModificarToolStripMenuItem.Size = New System.Drawing.Size(70, 20)
-        Me.ModificarToolStripMenuItem.Text = "Modificar"
-        '
-        'ListarToolStripMenuItem
-        '
-        Me.ListarToolStripMenuItem.DropDownItems.AddRange(New System.Windows.Forms.ToolStripItem() {Me.UsuarioToolStripMenuItem})
-        Me.ListarToolStripMenuItem.Name = "ListarToolStripMenuItem"
-        Me.ListarToolStripMenuItem.Size = New System.Drawing.Size(47, 20)
-        Me.ListarToolStripMenuItem.Text = "Listar"
-        '
-        'UsuarioToolStripMenuItem
-        '
-        Me.UsuarioToolStripMenuItem.Name = "UsuarioToolStripMenuItem"
-        Me.UsuarioToolStripMenuItem.Size = New System.Drawing.Size(114, 22)
-        Me.UsuarioToolStripMenuItem.Text = "Usuario"
-        '
-        'UsuarioToolStripMenuItem1
-        '
-        Me.UsuarioToolStripMenuItem1.Name = "UsuarioToolStripMenuItem1"
-        Me.UsuarioToolStripMenuItem1.Size = New System.Drawing.Size(114, 22)
-        Me.UsuarioToolStripMenuItem1.Text = "Usuario"
-        '
         'UsuarioToolStripMenuItem2
         '
         Me.UsuarioToolStripMenuItem2.Name = "UsuarioToolStripMenuItem2"
         Me.UsuarioToolStripMenuItem2.Size = New System.Drawing.Size(180, 22)
         Me.UsuarioToolStripMenuItem2.Text = "Usuario"
-        '
-        'UsuarioToolStripMenuItem3
-        '
-        Me.UsuarioToolStripMenuItem3.Name = "UsuarioToolStripMenuItem3"
-        Me.UsuarioToolStripMenuItem3.Size = New System.Drawing.Size(114, 22)
-        Me.UsuarioToolStripMenuItem3.Text = "Usuario"
         '
         'Label1
         '
@@ -143,10 +113,6 @@ Partial Class Inicio
     Friend WithEvents UsuarioToolStripMenuItem3 As ToolStripMenuItem
     Friend WithEvents ConsultaToolStripMenuItem As ToolStripMenuItem
     Friend WithEvents UsuarioToolStripMenuItem2 As ToolStripMenuItem
-    Friend WithEvents ModificarToolStripMenuItem As ToolStripMenuItem
-    Friend WithEvents UsuarioToolStripMenuItem1 As ToolStripMenuItem
-    Friend WithEvents ListarToolStripMenuItem As ToolStripMenuItem
-    Friend WithEvents UsuarioToolStripMenuItem As ToolStripMenuItem
     Friend WithEvents Label1 As Label
     Friend WithEvents PictureBox1 As PictureBox
 End Class
