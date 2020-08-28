@@ -96,9 +96,9 @@ Partial Class ModificarUser
         '
         'Button1
         '
-        Me.Button1.Location = New System.Drawing.Point(260, 330)
+        Me.Button1.Location = New System.Drawing.Point(175, 306)
         Me.Button1.Name = "Button1"
-        Me.Button1.Size = New System.Drawing.Size(259, 26)
+        Me.Button1.Size = New System.Drawing.Size(360, 26)
         Me.Button1.TabIndex = 7
         Me.Button1.Text = "Guardar"
         Me.Button1.UseVisualStyleBackColor = True
@@ -106,7 +106,7 @@ Partial Class ModificarUser
         'Label5
         '
         Me.Label5.AutoSize = True
-        Me.Label5.Location = New System.Drawing.Point(381, 83)
+        Me.Label5.Location = New System.Drawing.Point(16, 240)
         Me.Label5.Name = "Label5"
         Me.Label5.Size = New System.Drawing.Size(45, 13)
         Me.Label5.TabIndex = 8
@@ -115,7 +115,7 @@ Partial Class ModificarUser
         'Label6
         '
         Me.Label6.AutoSize = True
-        Me.Label6.Location = New System.Drawing.Point(381, 133)
+        Me.Label6.Location = New System.Drawing.Point(341, 83)
         Me.Label6.Name = "Label6"
         Me.Label6.Size = New System.Drawing.Size(74, 13)
         Me.Label6.TabIndex = 10
@@ -123,14 +123,14 @@ Partial Class ModificarUser
         '
         'MonthCalendar1
         '
-        Me.MonthCalendar1.Location = New System.Drawing.Point(467, 130)
+        Me.MonthCalendar1.Location = New System.Drawing.Point(427, 80)
         Me.MonthCalendar1.Name = "MonthCalendar1"
         Me.MonthCalendar1.TabIndex = 11
         '
         'ComboBox1
         '
         Me.ComboBox1.FormattingEnabled = True
-        Me.ComboBox1.Location = New System.Drawing.Point(467, 80)
+        Me.ComboBox1.Location = New System.Drawing.Point(65, 237)
         Me.ComboBox1.Name = "ComboBox1"
         Me.ComboBox1.Size = New System.Drawing.Size(248, 21)
         Me.ComboBox1.TabIndex = 12
@@ -140,7 +140,7 @@ Partial Class ModificarUser
         '
         Me.AutoScaleDimensions = New System.Drawing.SizeF(6.0!, 13.0!)
         Me.AutoScaleMode = System.Windows.Forms.AutoScaleMode.Font
-        Me.ClientSize = New System.Drawing.Size(811, 368)
+        Me.ClientSize = New System.Drawing.Size(706, 345)
         Me.Controls.Add(Me.ComboBox1)
         Me.Controls.Add(Me.MonthCalendar1)
         Me.Controls.Add(Me.Label6)

@@ -34,13 +34,14 @@ Partial Class AltaUsuario
         Me.InputPasswordAltaUser = New System.Windows.Forms.TextBox()
         Me.MonthCalendarBirthDateAltaUser = New System.Windows.Forms.MonthCalendar()
         Me.GenderSelectedAltaUser = New System.Windows.Forms.ListBox()
+        Me.Label5 = New System.Windows.Forms.Label()
         Me.SuspendLayout()
         '
         'AltaU
         '
         Me.AltaU.AutoSize = True
         Me.AltaU.Font = New System.Drawing.Font("Comic Sans MS", 21.75!, System.Drawing.FontStyle.Regular, System.Drawing.GraphicsUnit.Point, CType(0, Byte))
-        Me.AltaU.Location = New System.Drawing.Point(29, 9)
+        Me.AltaU.Location = New System.Drawing.Point(12, 20)
         Me.AltaU.Name = "AltaU"
         Me.AltaU.Size = New System.Drawing.Size(149, 40)
         Me.AltaU.TabIndex = 0
@@ -49,7 +50,7 @@ Partial Class AltaUsuario
         'EmailU
         '
         Me.EmailU.AutoSize = True
-        Me.EmailU.Location = New System.Drawing.Point(12, 146)
+        Me.EmailU.Location = New System.Drawing.Point(15, 133)
         Me.EmailU.Name = "EmailU"
         Me.EmailU.Size = New System.Drawing.Size(35, 13)
         Me.EmailU.TabIndex = 1
@@ -58,7 +59,7 @@ Partial Class AltaUsuario
         'Label1
         '
         Me.Label1.AutoSize = True
-        Me.Label1.Location = New System.Drawing.Point(401, 146)
+        Me.Label1.Location = New System.Drawing.Point(401, 133)
         Me.Label1.Name = "Label1"
         Me.Label1.Size = New System.Drawing.Size(56, 13)
         Me.Label1.TabIndex = 2
@@ -76,7 +77,7 @@ Partial Class AltaUsuario
         'Label3
         '
         Me.Label3.AutoSize = True
-        Me.Label3.Location = New System.Drawing.Point(12, 196)
+        Me.Label3.Location = New System.Drawing.Point(12, 176)
         Me.Label3.Name = "Label3"
         Me.Label3.Size = New System.Drawing.Size(74, 13)
         Me.Label3.TabIndex = 4
@@ -93,7 +94,7 @@ Partial Class AltaUsuario
         '
         'Button1
         '
-        Me.Button1.Location = New System.Drawing.Point(219, 393)
+        Me.Button1.Location = New System.Drawing.Point(133, 363)
         Me.Button1.Name = "Button1"
         Me.Button1.Size = New System.Drawing.Size(378, 27)
         Me.Button1.TabIndex = 6
@@ -109,21 +110,21 @@ Partial Class AltaUsuario
         '
         'InputEmailAltaUser
         '
-        Me.InputEmailAltaUser.Location = New System.Drawing.Point(56, 143)
+        Me.InputEmailAltaUser.Location = New System.Drawing.Point(56, 129)
         Me.InputEmailAltaUser.Name = "InputEmailAltaUser"
         Me.InputEmailAltaUser.Size = New System.Drawing.Size(285, 20)
         Me.InputEmailAltaUser.TabIndex = 8
         '
         'InputPasswordAltaUser
         '
-        Me.InputPasswordAltaUser.Location = New System.Drawing.Point(463, 143)
+        Me.InputPasswordAltaUser.Location = New System.Drawing.Point(463, 130)
         Me.InputPasswordAltaUser.Name = "InputPasswordAltaUser"
-        Me.InputPasswordAltaUser.Size = New System.Drawing.Size(287, 20)
+        Me.InputPasswordAltaUser.Size = New System.Drawing.Size(150, 20)
         Me.InputPasswordAltaUser.TabIndex = 9
         '
         'MonthCalendarBirthDateAltaUser
         '
-        Me.MonthCalendarBirthDateAltaUser.Location = New System.Drawing.Point(93, 196)
+        Me.MonthCalendarBirthDateAltaUser.Location = New System.Drawing.Point(93, 176)
         Me.MonthCalendarBirthDateAltaUser.Name = "MonthCalendarBirthDateAltaUser"
         Me.MonthCalendarBirthDateAltaUser.TabIndex = 10
         '
@@ -136,11 +137,20 @@ Partial Class AltaUsuario
         Me.GenderSelectedAltaUser.Size = New System.Drawing.Size(150, 43)
         Me.GenderSelectedAltaUser.TabIndex = 11
         '
+        'Label5
+        '
+        Me.Label5.AutoSize = True
+        Me.Label5.Location = New System.Drawing.Point(567, 268)
+        Me.Label5.Name = "Label5"
+        Me.Label5.Size = New System.Drawing.Size(0, 13)
+        Me.Label5.TabIndex = 12
+        '
         'AltaUsuario
         '
         Me.AutoScaleDimensions = New System.Drawing.SizeF(6.0!, 13.0!)
         Me.AutoScaleMode = System.Windows.Forms.AutoScaleMode.Font
-        Me.ClientSize = New System.Drawing.Size(800, 450)
+        Me.ClientSize = New System.Drawing.Size(628, 411)
+        Me.Controls.Add(Me.Label5)
         Me.Controls.Add(Me.GenderSelectedAltaUser)
         Me.Controls.Add(Me.MonthCalendarBirthDateAltaUser)
         Me.Controls.Add(Me.InputPasswordAltaUser)
@@ -172,4 +182,5 @@ Partial Class AltaUsuario
     Friend WithEvents InputPasswordAltaUser As TextBox
     Friend WithEvents MonthCalendarBirthDateAltaUser As MonthCalendar
     Friend WithEvents GenderSelectedAltaUser As ListBox
+    Friend WithEvents Label5 As Label
 End Class

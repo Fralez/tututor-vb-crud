@@ -115,7 +115,7 @@ Partial Class ConsultaUsuario
         Me.Controls.Add(Me.TextBox1)
         Me.Controls.Add(Me.Label1)
         Me.Name = "ConsultaUsuario"
-        Me.Text = "BajaUsuario"
+        Me.Text = "ConsultaUsuario"
         Me.ResumeLayout(False)
         Me.PerformLayout()
 

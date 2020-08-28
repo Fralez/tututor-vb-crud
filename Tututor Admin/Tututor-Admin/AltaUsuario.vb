@@ -10,6 +10,10 @@
 
     Private Sub InputPasswordAltaUser_TextChanged(sender As Object, e As EventArgs) Handles InputPasswordAltaUser.TextChanged
         InputPasswordAltaUser.PasswordChar = "*"
-        InputPasswordAltaUser.MaxLength = 14
+        InputPasswordAltaUser.MaxLength = 20
+    End Sub
+
+    Private Sub Label5_Click(sender As Object, e As EventArgs) Handles Label5.Click
+
     End Sub
 End Class
