@@ -34,6 +34,8 @@ Partial Class ModificarUser
         Me.Label6 = New System.Windows.Forms.Label()
         Me.MonthCalendar1 = New System.Windows.Forms.MonthCalendar()
         Me.ComboBox1 = New System.Windows.Forms.ComboBox()
+        Me.Label7 = New System.Windows.Forms.Label()
+        Me.TextBox4 = New System.Windows.Forms.TextBox()
         Me.SuspendLayout()
         '
         'Label1
@@ -49,7 +51,7 @@ Partial Class ModificarUser
         'Label2
         '
         Me.Label2.AutoSize = True
-        Me.Label2.Location = New System.Drawing.Point(16, 83)
+        Me.Label2.Location = New System.Drawing.Point(19, 86)
         Me.Label2.Name = "Label2"
         Me.Label2.Size = New System.Drawing.Size(35, 13)
         Me.Label2.TabIndex = 1
@@ -57,7 +59,7 @@ Partial Class ModificarUser
         '
         'TextBox1
         '
-        Me.TextBox1.Location = New System.Drawing.Point(69, 80)
+        Me.TextBox1.Location = New System.Drawing.Point(69, 83)
         Me.TextBox1.Name = "TextBox1"
         Me.TextBox1.Size = New System.Drawing.Size(244, 20)
         Me.TextBox1.TabIndex = 2
@@ -65,7 +67,7 @@ Partial Class ModificarUser
         'Label3
         '
         Me.Label3.AutoSize = True
-        Me.Label3.Location = New System.Drawing.Point(16, 133)
+        Me.Label3.Location = New System.Drawing.Point(16, 129)
         Me.Label3.Name = "Label3"
         Me.Label3.Size = New System.Drawing.Size(38, 13)
         Me.Label3.TabIndex = 3
@@ -73,14 +75,14 @@ Partial Class ModificarUser
         '
         'TextBox2
         '
-        Me.TextBox2.Location = New System.Drawing.Point(68, 130)
+        Me.TextBox2.Location = New System.Drawing.Point(68, 126)
         Me.TextBox2.Name = "TextBox2"
         Me.TextBox2.Size = New System.Drawing.Size(245, 20)
         Me.TextBox2.TabIndex = 4
         '
         'TextBox3
         '
-        Me.TextBox3.Location = New System.Drawing.Point(82, 182)
+        Me.TextBox3.Location = New System.Drawing.Point(82, 198)
         Me.TextBox3.Name = "TextBox3"
         Me.TextBox3.Size = New System.Drawing.Size(231, 20)
         Me.TextBox3.TabIndex = 5
@@ -88,7 +90,7 @@ Partial Class ModificarUser
         'Label4
         '
         Me.Label4.AutoSize = True
-        Me.Label4.Location = New System.Drawing.Point(16, 185)
+        Me.Label4.Location = New System.Drawing.Point(16, 201)
         Me.Label4.Name = "Label4"
         Me.Label4.Size = New System.Drawing.Size(56, 13)
         Me.Label4.TabIndex = 6
@@ -136,11 +138,29 @@ Partial Class ModificarUser
         Me.ComboBox1.TabIndex = 12
         Me.ComboBox1.Text = "Select your gender"
         '
+        'Label7
+        '
+        Me.Label7.AutoSize = True
+        Me.Label7.Location = New System.Drawing.Point(16, 167)
+        Me.Label7.Name = "Label7"
+        Me.Label7.Size = New System.Drawing.Size(20, 13)
+        Me.Label7.TabIndex = 13
+        Me.Label7.Text = "CI:"
+        '
+        'TextBox4
+        '
+        Me.TextBox4.Location = New System.Drawing.Point(69, 164)
+        Me.TextBox4.Name = "TextBox4"
+        Me.TextBox4.Size = New System.Drawing.Size(245, 20)
+        Me.TextBox4.TabIndex = 14
+        '
         'ModificarUser
         '
         Me.AutoScaleDimensions = New System.Drawing.SizeF(6.0!, 13.0!)
         Me.AutoScaleMode = System.Windows.Forms.AutoScaleMode.Font
         Me.ClientSize = New System.Drawing.Size(706, 345)
+        Me.Controls.Add(Me.TextBox4)
+        Me.Controls.Add(Me.Label7)
         Me.Controls.Add(Me.ComboBox1)
         Me.Controls.Add(Me.MonthCalendar1)
         Me.Controls.Add(Me.Label6)
@@ -172,4 +192,6 @@ Partial Class ModificarUser
     Friend WithEvents Label6 As Label
     Friend WithEvents MonthCalendar1 As MonthCalendar
     Friend WithEvents ComboBox1 As ComboBox
+    Friend WithEvents Label7 As Label
+    Friend WithEvents TextBox4 As TextBox
 End Class

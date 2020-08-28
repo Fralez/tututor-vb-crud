@@ -35,6 +35,8 @@ Partial Class AltaUsuario
         Me.MonthCalendarBirthDateAltaUser = New System.Windows.Forms.MonthCalendar()
         Me.GenderSelectedAltaUser = New System.Windows.Forms.ListBox()
         Me.Label5 = New System.Windows.Forms.Label()
+        Me.InputIdentifyNumberUser = New System.Windows.Forms.TextBox()
+        Me.Label6 = New System.Windows.Forms.Label()
         Me.SuspendLayout()
         '
         'AltaU
@@ -50,7 +52,7 @@ Partial Class AltaUsuario
         'EmailU
         '
         Me.EmailU.AutoSize = True
-        Me.EmailU.Location = New System.Drawing.Point(15, 133)
+        Me.EmailU.Location = New System.Drawing.Point(12, 111)
         Me.EmailU.Name = "EmailU"
         Me.EmailU.Size = New System.Drawing.Size(35, 13)
         Me.EmailU.TabIndex = 1
@@ -103,14 +105,14 @@ Partial Class AltaUsuario
         '
         'InputNameAltaUser
         '
-        Me.InputNameAltaUser.Location = New System.Drawing.Point(56, 81)
+        Me.InputNameAltaUser.Location = New System.Drawing.Point(53, 81)
         Me.InputNameAltaUser.Name = "InputNameAltaUser"
         Me.InputNameAltaUser.Size = New System.Drawing.Size(285, 20)
         Me.InputNameAltaUser.TabIndex = 7
         '
         'InputEmailAltaUser
         '
-        Me.InputEmailAltaUser.Location = New System.Drawing.Point(56, 129)
+        Me.InputEmailAltaUser.Location = New System.Drawing.Point(53, 111)
         Me.InputEmailAltaUser.Name = "InputEmailAltaUser"
         Me.InputEmailAltaUser.Size = New System.Drawing.Size(285, 20)
         Me.InputEmailAltaUser.TabIndex = 8
@@ -131,7 +133,7 @@ Partial Class AltaUsuario
         'GenderSelectedAltaUser
         '
         Me.GenderSelectedAltaUser.FormattingEnabled = True
-        Me.GenderSelectedAltaUser.Items.AddRange(New Object() {"Female", "Male", "Other"})
+        Me.GenderSelectedAltaUser.Items.AddRange(New Object() {"Others", "Male", "Female"})
         Me.GenderSelectedAltaUser.Location = New System.Drawing.Point(463, 81)
         Me.GenderSelectedAltaUser.Name = "GenderSelectedAltaUser"
         Me.GenderSelectedAltaUser.Size = New System.Drawing.Size(150, 43)
@@ -145,11 +147,29 @@ Partial Class AltaUsuario
         Me.Label5.Size = New System.Drawing.Size(0, 13)
         Me.Label5.TabIndex = 12
         '
+        'InputIdentifyNumberUser
+        '
+        Me.InputIdentifyNumberUser.Location = New System.Drawing.Point(53, 144)
+        Me.InputIdentifyNumberUser.Name = "InputIdentifyNumberUser"
+        Me.InputIdentifyNumberUser.Size = New System.Drawing.Size(285, 20)
+        Me.InputIdentifyNumberUser.TabIndex = 13
+        '
+        'Label6
+        '
+        Me.Label6.AutoSize = True
+        Me.Label6.Location = New System.Drawing.Point(16, 147)
+        Me.Label6.Name = "Label6"
+        Me.Label6.Size = New System.Drawing.Size(20, 13)
+        Me.Label6.TabIndex = 14
+        Me.Label6.Text = "CI:"
+        '
         'AltaUsuario
         '
         Me.AutoScaleDimensions = New System.Drawing.SizeF(6.0!, 13.0!)
         Me.AutoScaleMode = System.Windows.Forms.AutoScaleMode.Font
         Me.ClientSize = New System.Drawing.Size(628, 411)
+        Me.Controls.Add(Me.Label6)
+        Me.Controls.Add(Me.InputIdentifyNumberUser)
         Me.Controls.Add(Me.Label5)
         Me.Controls.Add(Me.GenderSelectedAltaUser)
         Me.Controls.Add(Me.MonthCalendarBirthDateAltaUser)
@@ -183,4 +203,6 @@ Partial Class AltaUsuario
     Friend WithEvents MonthCalendarBirthDateAltaUser As MonthCalendar
     Friend WithEvents GenderSelectedAltaUser As ListBox
     Friend WithEvents Label5 As Label
+    Friend WithEvents InputIdentifyNumberUser As TextBox
+    Friend WithEvents Label6 As Label
 End Class

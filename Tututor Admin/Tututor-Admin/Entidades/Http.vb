@@ -4,9 +4,11 @@ Imports System.Text
 Imports Newtonsoft.Json
 
 Public Class Http
+    Const baseUrl As String = "http://localhost:3000"
+
     Public Shared Function HttpGet(url As String) As String
         Try
-            Dim Request As HttpWebRequest = HttpWebRequest.Create("http://localhost:3000/users")
+            Dim Request As HttpWebRequest = HttpWebRequest.Create(url)
             Request.Proxy = Nothing
 
             Dim response As HttpWebResponse = Request.GetResponse()
@@ -23,8 +25,10 @@ Public Class Http
         End Try
     End Function
 
-    Public Shared Function HttpPost(url As String, body As String)
-        Dim Request As HttpWebRequest = HttpWebRequest.Create("http://localhost:3000/users")
+    Public Shared Function HttpPostCreateUser(email As String, password As String, identityNumber As Integer, name As String, gender As Integer, birthDate As DateTime)
+        Dim Request As HttpWebRequest = HttpWebRequest.Create(baseUrl + "/users")
+
+        Dim body As String = "{""user"": {""email"":" + email + ",""password"":" + password + ",""identity_number"":" + identityNumber + ",""name"":" + name + ",""gender"":" + gender + ",""birth_date"":" + birthDate.ToString() + "}}"
 
         Request.Method = "POST"
         Request.ContentType = "application/json"
