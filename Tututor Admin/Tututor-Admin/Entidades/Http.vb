@@ -25,28 +25,29 @@ Public Class Http
         End Try
     End Function
 
-    Public Shared Function HttpPostCreateUser(email As String, password As String, identityNumber As Integer, name As String, gender As Integer, birthDate As DateTime)
-        Dim Request As HttpWebRequest = HttpWebRequest.Create(baseUrl + "/users")
+    Public Shared Function HttpPostCreateUser(email As String, password As String, identityNumber As String, name As String, gender As String, birthDate As DateTime)
+        Try
+            Dim Request As HttpWebRequest = HttpWebRequest.Create(baseUrl + "/users")
 
-        Dim body As String = "{""user"": {""email"":" + email + ",""password"":" + password + ",""identity_number"":" + identityNumber + ",""name"":" + name + ",""gender"":" + gender + ",""birth_date"":" + birthDate.ToString() + "}}"
+            Dim body As String = " {""user"": {""email"":""" + email + """, ""password"":""" + password + """, ""identity_number"":""" + identityNumber + """, ""name"":""" + name + """, ""gender"":" + gender + ", ""birth_date"":""" + birthDate.ToString() + """}} "
 
-        Request.Method = "POST"
-        Request.ContentType = "application/json"
-        Dim postBytes = Encoding.UTF8.GetBytes(body)
-        Request.ContentLength = postBytes.Length
+            Request.Method = "POST"
+            Request.ContentType = "application/json"
+            Dim postBytes = Encoding.UTF8.GetBytes(body)
+            Request.ContentLength = postBytes.Length
 
-        Dim httpPostStream As IO.Stream = Request.GetRequestStream()
-        httpPostStream.Write(postBytes, 0, postBytes.Length)
-        httpPostStream.Close()
-        httpPostStream = Nothing
+            Dim httpPostStream As IO.Stream = Request.GetRequestStream()
+            httpPostStream.Write(postBytes, 0, postBytes.Length)
 
-        Dim response As HttpWebResponse
-        response = DirectCast(Request.GetResponse(), HttpWebResponse)
+            Dim response As HttpWebResponse
+            response = DirectCast(Request.GetResponse(), HttpWebResponse)
 
-        Dim responseReader As New StreamReader(response.GetResponseStream())
+            Dim responseReader As New StreamReader(response.GetResponseStream())
 
-        Dim finalResponse As String = responseReader.ReadToEnd()
-        Return finalResponse
+            Dim finalResponse As String = responseReader.ReadToEnd()
+            Return finalResponse
+        Catch ex As Exception
+        End Try
     End Function
 
 End Class

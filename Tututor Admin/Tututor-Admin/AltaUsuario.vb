@@ -21,8 +21,4 @@
         Dim http As Http = New Http()
         Http.HttpPostCreateUser(InputEmailAltaUser.Text, InputPasswordAltaUser.Text, InputIdentifyNumberUser.Text, InputNameAltaUser.Text, GenderSelectedAltaUser.SelectedIndex, MonthCalendarBirthDateAltaUser.SelectionRange.Start.ToShortDateString())
     End Sub
-
-    Private Sub Label6_Click(sender As Object, e As EventArgs) Handles Label6.Click
-
-    End Sub
 End Class
