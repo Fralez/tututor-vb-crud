@@ -6,9 +6,28 @@ Imports Newtonsoft.Json
 Public Class Http
     Const baseUrl As String = "http://localhost:3000"
 
-    Public Shared Function HttpGet(url As String) As String
+    Public Shared Function HttpGetUsers() As String
         Try
-            Dim Request As HttpWebRequest = HttpWebRequest.Create(url)
+            Dim Request As HttpWebRequest = HttpWebRequest.Create(baseUrl + "/users")
+            Request.Proxy = Nothing
+
+            Dim response As HttpWebResponse = Request.GetResponse()
+            Dim responseStream As System.IO.Stream = response.GetResponseStream()
+
+            Dim streamReader As New System.IO.StreamReader(responseStream)
+            Dim data As String = streamReader.ReadToEnd()
+
+            streamReader.Close()
+
+            Return data
+        Catch ex As Exception
+            Throw ex
+        End Try
+    End Function
+
+    Public Shared Function HttpShowUserByEmail(email As String) As String
+        Try
+            Dim Request As HttpWebRequest = HttpWebRequest.Create(baseUrl + "/users/email/" + email)
             Request.Proxy = Nothing
 
             Dim response As HttpWebResponse = Request.GetResponse()
@@ -50,4 +69,53 @@ Public Class Http
         End Try
     End Function
 
+    Public Shared Function HttpPutUpdateUser(email As String, password As String, identityNumber As String, name As String, gender As String, birthDate As DateTime)
+        Try
+            Dim Request As HttpWebRequest = HttpWebRequest.Create(baseUrl + "/users")
+
+            Dim body As String = " {""user"": {""email"":""" + email + """, ""password"":""" + password + """, ""identity_number"":""" + identityNumber + """, ""name"":""" + name + """, ""gender"":" + gender + ", ""birth_date"":""" + birthDate.ToString() + """}} "
+
+            Request.Method = "PUT"
+            Request.ContentType = "application/json"
+            Dim postBytes = Encoding.UTF8.GetBytes(body)
+            Request.ContentLength = postBytes.Length
+
+            Dim httpPostStream As IO.Stream = Request.GetRequestStream()
+            httpPostStream.Write(postBytes, 0, postBytes.Length)
+
+            Dim response As HttpWebResponse
+            response = DirectCast(Request.GetResponse(), HttpWebResponse)
+
+            Dim responseReader As New StreamReader(response.GetResponseStream())
+
+            Dim finalResponse As String = responseReader.ReadToEnd()
+            Return finalResponse
+        Catch ex As Exception
+        End Try
+    End Function
+
+    Public Shared Function HttpDeletUser(id As String)
+        Try
+            Dim Request As HttpWebRequest = HttpWebRequest.Create(baseUrl + "/users/" + id)
+
+            Dim body As String = ""
+
+            Request.Method = "DELETE"
+            Request.ContentType = "application/json"
+            Dim postBytes = Encoding.UTF8.GetBytes(body)
+            Request.ContentLength = postBytes.Length
+
+            Dim httpPostStream As IO.Stream = Request.GetRequestStream()
+            httpPostStream.Write(postBytes, 0, postBytes.Length)
+
+            Dim response As HttpWebResponse
+            response = DirectCast(Request.GetResponse(), HttpWebResponse)
+
+            Dim responseReader As New StreamReader(response.GetResponseStream())
+
+            Dim finalResponse As String = responseReader.ReadToEnd()
+            Return finalResponse
+        Catch ex As Exception
+        End Try
+    End Function
 End Class
