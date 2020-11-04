@@ -73,12 +73,6 @@
     <Import Include="System.Threading.Tasks" />
   </ItemGroup>
   <ItemGroup>
-    <Compile Include="AltaUsuario.Designer.vb">
-      <DependentUpon>AltaUsuario.vb</DependentUpon>
-    </Compile>
-    <Compile Include="AltaUsuario.vb">
-      <SubType>Form</SubType>
-    </Compile>
     <Compile Include="ConsultaUsuario.Designer.vb">
       <DependentUpon>ConsultaUsuario.vb</DependentUpon>
     </Compile>
@@ -99,12 +93,6 @@
     <Compile Include="ListarUsuario.vb">
       <SubType>Form</SubType>
     </Compile>
-    <Compile Include="ModificarUser.Designer.vb">
-      <DependentUpon>ModificarUser.vb</DependentUpon>
-    </Compile>
-    <Compile Include="ModificarUser.vb">
-      <SubType>Form</SubType>
-    </Compile>
     <Compile Include="My Project\AssemblyInfo.vb" />
     <Compile Include="My Project\Application.Designer.vb">
       <AutoGen>True</AutoGen>
@@ -122,9 +110,6 @@
     </Compile>
   </ItemGroup>
   <ItemGroup>
-    <EmbeddedResource Include="AltaUsuario.resx">
-      <DependentUpon>AltaUsuario.vb</DependentUpon>
-    </EmbeddedResource>
     <EmbeddedResource Include="ConsultaUsuario.resx">
       <DependentUpon>ConsultaUsuario.vb</DependentUpon>
     </EmbeddedResource>
@@ -133,9 +118,6 @@
     </EmbeddedResource>
     <EmbeddedResource Include="ListarUsuario.resx">
       <DependentUpon>ListarUsuario.vb</DependentUpon>
-    </EmbeddedResource>
-    <EmbeddedResource Include="ModificarUser.resx">
-      <DependentUpon>ModificarUser.vb</DependentUpon>
     </EmbeddedResource>
     <EmbeddedResource Include="My Project\Resources.resx">
       <Generator>VbMyResourcesResXFileCodeGenerator</Generator>

@@ -1,9 +1,9 @@
-﻿<Global.Microsoft.VisualBasic.CompilerServices.DesignerGenerated()> _
+﻿<Global.Microsoft.VisualBasic.CompilerServices.DesignerGenerated()>
 Partial Class ListarUsuario
     Inherits System.Windows.Forms.Form
 
     'Form reemplaza a Dispose para limpiar la lista de componentes.
-    <System.Diagnostics.DebuggerNonUserCode()> _
+    <System.Diagnostics.DebuggerNonUserCode()>
     Protected Overrides Sub Dispose(ByVal disposing As Boolean)
         Try
             If disposing AndAlso components IsNot Nothing Then
@@ -20,50 +20,44 @@ Partial Class ListarUsuario
     'NOTA: el Diseñador de Windows Forms necesita el siguiente procedimiento
     'Se puede modificar usando el Diseñador de Windows Forms.  
     'No lo modifique con el editor de código.
-    <System.Diagnostics.DebuggerStepThrough()> _
+    <System.Diagnostics.DebuggerStepThrough()>
     Private Sub InitializeComponent()
         Me.Label1 = New System.Windows.Forms.Label()
         Me.ListBox1 = New System.Windows.Forms.ListBox()
-        Me.Button1 = New System.Windows.Forms.Button()
         Me.SuspendLayout()
         '
         'Label1
         '
         Me.Label1.AutoSize = True
-        Me.Label1.Font = New System.Drawing.Font("Comic Sans MS", 20.25!, System.Drawing.FontStyle.Regular, System.Drawing.GraphicsUnit.Point, CType(0, Byte))
-        Me.Label1.Location = New System.Drawing.Point(24, 23)
+        Me.Label1.Font = New System.Drawing.Font("Century Gothic", 20.25!, System.Drawing.FontStyle.Regular, System.Drawing.GraphicsUnit.Point, CType(0, Byte))
+        Me.Label1.Location = New System.Drawing.Point(211, 31)
         Me.Label1.Name = "Label1"
-        Me.Label1.Size = New System.Drawing.Size(195, 38)
+        Me.Label1.Size = New System.Drawing.Size(179, 33)
         Me.Label1.TabIndex = 0
         Me.Label1.Text = "Listar Usuario"
         '
         'ListBox1
         '
+        Me.ListBox1.Font = New System.Drawing.Font("Century Gothic", 8.25!, System.Drawing.FontStyle.Regular, System.Drawing.GraphicsUnit.Point, CType(0, Byte))
         Me.ListBox1.FormattingEnabled = True
-        Me.ListBox1.Location = New System.Drawing.Point(31, 74)
+        Me.ListBox1.ItemHeight = 16
+        Me.ListBox1.Location = New System.Drawing.Point(36, 91)
+        Me.ListBox1.Margin = New System.Windows.Forms.Padding(3, 4, 3, 4)
         Me.ListBox1.Name = "ListBox1"
-        Me.ListBox1.Size = New System.Drawing.Size(464, 251)
+        Me.ListBox1.Size = New System.Drawing.Size(541, 308)
         Me.ListBox1.TabIndex = 1
-        '
-        'Button1
-        '
-        Me.Button1.Location = New System.Drawing.Point(97, 352)
-        Me.Button1.Name = "Button1"
-        Me.Button1.Size = New System.Drawing.Size(331, 23)
-        Me.Button1.TabIndex = 2
-        Me.Button1.Text = "Listar"
-        Me.Button1.UseVisualStyleBackColor = True
         '
         'ListarUsuario
         '
-        Me.AutoScaleDimensions = New System.Drawing.SizeF(6.0!, 13.0!)
+        Me.AutoScaleDimensions = New System.Drawing.SizeF(7.0!, 16.0!)
         Me.AutoScaleMode = System.Windows.Forms.AutoScaleMode.Font
-        Me.ClientSize = New System.Drawing.Size(533, 407)
-        Me.Controls.Add(Me.Button1)
+        Me.ClientSize = New System.Drawing.Size(622, 414)
         Me.Controls.Add(Me.ListBox1)
         Me.Controls.Add(Me.Label1)
+        Me.Font = New System.Drawing.Font("Century Gothic", 8.25!, System.Drawing.FontStyle.Regular, System.Drawing.GraphicsUnit.Point, CType(0, Byte))
+        Me.Margin = New System.Windows.Forms.Padding(3, 4, 3, 4)
         Me.Name = "ListarUsuario"
-        Me.Text = "ListarUsuario"
+        Me.Text = "Listar Usuario"
         Me.ResumeLayout(False)
         Me.PerformLayout()
 
@@ -71,5 +65,4 @@ Partial Class ListarUsuario
 
     Friend WithEvents Label1 As Label
     Friend WithEvents ListBox1 As ListBox
-    Friend WithEvents Button1 As Button
 End Class
