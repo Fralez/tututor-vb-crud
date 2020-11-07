@@ -11,8 +11,4 @@
     Private Sub UsuarioToolStripMenuItem_Click(sender As Object, e As EventArgs)
 
     End Sub
-
-    Private Sub ListarToolStripMenuItem_Click(sender As Object, e As EventArgs) 
-        ListarUsuario.Show()
-    End Sub
 End Class
