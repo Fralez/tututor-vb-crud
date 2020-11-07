@@ -1,9 +1,9 @@
-﻿<Global.Microsoft.VisualBasic.CompilerServices.DesignerGenerated()> _
+﻿<Global.Microsoft.VisualBasic.CompilerServices.DesignerGenerated()>
 Partial Class Inicio
     Inherits System.Windows.Forms.Form
 
     'Form reemplaza a Dispose para limpiar la lista de componentes.
-    <System.Diagnostics.DebuggerNonUserCode()> _
+    <System.Diagnostics.DebuggerNonUserCode()>
     Protected Overrides Sub Dispose(ByVal disposing As Boolean)
         Try
             If disposing AndAlso components IsNot Nothing Then
@@ -20,12 +20,11 @@ Partial Class Inicio
     'NOTA: el Diseñador de Windows Forms necesita el siguiente procedimiento
     'Se puede modificar usando el Diseñador de Windows Forms.  
     'No lo modifique con el editor de código.
-    <System.Diagnostics.DebuggerStepThrough()> _
+    <System.Diagnostics.DebuggerStepThrough()>
     Private Sub InitializeComponent()
         Me.MenuStrip1 = New System.Windows.Forms.MenuStrip()
         Me.AltaToolStripMenuItem = New System.Windows.Forms.ToolStripMenuItem()
         Me.UsuarioToolStripMenuItem3 = New System.Windows.Forms.ToolStripMenuItem()
-        Me.ListarToolStripMenuItem = New System.Windows.Forms.ToolStripMenuItem()
         Me.Label1 = New System.Windows.Forms.Label()
         Me.PictureBox1 = New System.Windows.Forms.PictureBox()
         Me.MenuStrip1.SuspendLayout()
@@ -43,7 +42,7 @@ Partial Class Inicio
         '
         'AltaToolStripMenuItem
         '
-        Me.AltaToolStripMenuItem.DropDownItems.AddRange(New System.Windows.Forms.ToolStripItem() {Me.UsuarioToolStripMenuItem3, Me.ListarToolStripMenuItem})
+        Me.AltaToolStripMenuItem.DropDownItems.AddRange(New System.Windows.Forms.ToolStripItem() {Me.UsuarioToolStripMenuItem3})
         Me.AltaToolStripMenuItem.Font = New System.Drawing.Font("Microsoft Sans Serif", 9.0!, System.Drawing.FontStyle.Regular, System.Drawing.GraphicsUnit.Point, CType(0, Byte))
         Me.AltaToolStripMenuItem.Name = "AltaToolStripMenuItem"
         Me.AltaToolStripMenuItem.Size = New System.Drawing.Size(62, 20)
@@ -54,12 +53,6 @@ Partial Class Inicio
         Me.UsuarioToolStripMenuItem3.Name = "UsuarioToolStripMenuItem3"
         Me.UsuarioToolStripMenuItem3.Size = New System.Drawing.Size(180, 22)
         Me.UsuarioToolStripMenuItem3.Text = "Administrar"
-        '
-        'ListarToolStripMenuItem
-        '
-        Me.ListarToolStripMenuItem.Name = "ListarToolStripMenuItem"
-        Me.ListarToolStripMenuItem.Size = New System.Drawing.Size(180, 22)
-        Me.ListarToolStripMenuItem.Text = "Listar"
         '
         'Label1
         '
@@ -106,5 +99,4 @@ Partial Class Inicio
     Friend WithEvents UsuarioToolStripMenuItem3 As ToolStripMenuItem
     Friend WithEvents Label1 As Label
     Friend WithEvents PictureBox1 As PictureBox
-    Friend WithEvents ListarToolStripMenuItem As ToolStripMenuItem
 End Class

@@ -12,7 +12,7 @@
 
     End Sub
 
-    Private Sub ListarToolStripMenuItem_Click(sender As Object, e As EventArgs) Handles ListarToolStripMenuItem.Click
+    Private Sub ListarToolStripMenuItem_Click(sender As Object, e As EventArgs) 
         ListarUsuario.Show()
     End Sub
 End Class
