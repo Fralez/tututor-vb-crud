@@ -4,30 +4,11 @@ Imports System.Text
 Imports Newtonsoft.Json
 
 Public Class Http
-    Const baseUrl As String = "http://localhost:3000"
+    Const baseUrl As String = "https://tututor-backend.herokuapp.com"
 
-    Public Shared Function HttpGetUsers() As String
+    Public Shared Function HttpShowUserByIdentityNumber(identityNumber As String) As String
         Try
-            Dim Request As HttpWebRequest = HttpWebRequest.Create(baseUrl + "/users")
-            Request.Proxy = Nothing
-
-            Dim response As HttpWebResponse = Request.GetResponse()
-            Dim responseStream As System.IO.Stream = response.GetResponseStream()
-
-            Dim streamReader As New System.IO.StreamReader(responseStream)
-            Dim data As String = streamReader.ReadToEnd()
-
-            streamReader.Close()
-
-            Return data
-        Catch ex As Exception
-            Throw ex
-        End Try
-    End Function
-
-    Public Shared Function HttpShowUserByEmail(email As String) As String
-        Try
-            Dim Request As HttpWebRequest = HttpWebRequest.Create(baseUrl + "/users/email/" + email)
+            Dim Request As HttpWebRequest = HttpWebRequest.Create(baseUrl + "/users/identity_number/" + identityNumber)
             Request.Proxy = Nothing
 
             Dim response As HttpWebResponse = Request.GetResponse()
@@ -71,7 +52,7 @@ Public Class Http
 
     Public Shared Function HttpPutUpdateUser(email As String, password As String, identityNumber As String, name As String, gender As String, birthDate As DateTime)
         Try
-            Dim Request As HttpWebRequest = HttpWebRequest.Create(baseUrl + "/users")
+            Dim Request As HttpWebRequest = HttpWebRequest.Create(baseUrl + "/users/update")
 
             Dim body As String = " {""user"": {""email"":""" + email + """, ""password"":""" + password + """, ""identity_number"":""" + identityNumber + """, ""name"":""" + name + """, ""gender"":" + gender + ", ""birth_date"":""" + birthDate.ToString() + """}} "
 
