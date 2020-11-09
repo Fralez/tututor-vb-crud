@@ -43,9 +43,6 @@ Public Class Http
             response = DirectCast(Request.GetResponse(), HttpWebResponse)
 
             Dim responseReader As New StreamReader(response.GetResponseStream())
-
-            Dim finalResponse As String = responseReader.ReadToEnd()
-            Return finalResponse
         Catch ex As Exception
         End Try
     End Function
@@ -68,34 +65,6 @@ Public Class Http
             response = DirectCast(Request.GetResponse(), HttpWebResponse)
 
             Dim responseReader As New StreamReader(response.GetResponseStream())
-
-            Dim finalResponse As String = responseReader.ReadToEnd()
-            Return finalResponse
-        Catch ex As Exception
-        End Try
-    End Function
-
-    Public Shared Function HttpDeletUser(id As String)
-        Try
-            Dim Request As HttpWebRequest = HttpWebRequest.Create(baseUrl + "/users/" + id)
-
-            Dim body As String = ""
-
-            Request.Method = "DELETE"
-            Request.ContentType = "application/json"
-            Dim postBytes = Encoding.UTF8.GetBytes(body)
-            Request.ContentLength = postBytes.Length
-
-            Dim httpPostStream As IO.Stream = Request.GetRequestStream()
-            httpPostStream.Write(postBytes, 0, postBytes.Length)
-
-            Dim response As HttpWebResponse
-            response = DirectCast(Request.GetResponse(), HttpWebResponse)
-
-            Dim responseReader As New StreamReader(response.GetResponseStream())
-
-            Dim finalResponse As String = responseReader.ReadToEnd()
-            Return finalResponse
         Catch ex As Exception
         End Try
     End Function
